@@ -1,0 +1,7 @@
+{
+  "name": "MAYA Pocket Desk",
+  "description": "Secure business assistant with Supabase + OpenAI",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module"
+}
