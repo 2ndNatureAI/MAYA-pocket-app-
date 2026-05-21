@@ -1,0 +1,22 @@
+{
+  "name": "maya-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server-secure.js",
+    "start": "node server-secure.js",
+    "check": "node --check server-secure.js && node --check security.js && node --check openai-safe.js",
+    "gen-admin-hash": "node -e \"console.log(require('bcryptjs').hashSync(process.argv[1], 10))\" -- ",
+    "gen-jwt-secret": "node -e \"console.log(require('crypto').randomBytes(32).toString('hex'))\""
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "@supabase/supabase-js": "^2.38.0",
+    "openai": "^4.20.0",
+    "express-rate-limit": "^7.0.0",
+    "jsonwebtoken": "^9.1.0",
+    "bcryptjs": "^2.4.3"
+  }
+}
